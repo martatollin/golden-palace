@@ -1,0 +1,9 @@
+@mixin standard($background: #333, $color: #fff, $border-radius: 10px) {
+    background-color: $background;
+    color: $color;
+    padding: 1rem 1.5rem;
+    border-radius: $border-radius;
+    display: inline-block;
+    text-decoration: none;
+    font-size: var(--font-size-1);
+}
