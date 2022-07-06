@@ -1,8 +1,13 @@
-@mixin standard($background: #333, $color: #fff, $border-radius: 10px) {
+@mixin standard(
+    $background: var(--color-accent),
+    $color: #fff,
+    $padding: 1rem 1.5rem
+) {
     background-color: $background;
     color: $color;
-    padding: 1rem 1.5rem;
-    border-radius: $border-radius;
+    padding: $padding;
+    border-radius: none;
+    border: none;
     display: inline-block;
     text-decoration: none;
     font-size: var(--font-size-1);
