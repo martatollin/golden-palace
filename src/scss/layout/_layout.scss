@@ -1,5 +1,0 @@
-@use '../components/button' as button;
-
-.link {
-    @include button.standard(var(--color-accent), blue, 30px);
-}

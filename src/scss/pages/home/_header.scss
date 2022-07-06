@@ -1,0 +1,10 @@
+.site-header {
+    &__inner {
+        margin-top: 3rem;
+        height: auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        position: fixed;
+    }
+}
