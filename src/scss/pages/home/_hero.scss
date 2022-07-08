@@ -5,7 +5,9 @@
 // }
 
 .hero {
-    background-image: url(../../assets/background.jpg);
+    background-image: url(./src/scss/assets/background.jpg);
+    background-size: cover;
+    background-position: center;
 
     &__inner {
         height: 100vh;
@@ -18,16 +20,20 @@
 
     &__title {
         font-family: var(--font-secondary);
-        font-size: var(--font-size-6);
+        font-size: var(--font-size-7);
         color: var(--color-secondary);
         font-weight: 400;
         font-style: normal;
+        margin: 0 0 2.25rem 0;
     }
 
     &__text {
         font-family: var(--font-primary);
         font-weight: 400;
         font-style: normal;
+        font-size: var(--font-size-2);
+        margin: 0 0 2.5rem 0;
+        color: var(--color-primary);
     }
 
     &__char {
