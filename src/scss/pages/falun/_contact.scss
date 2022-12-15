@@ -1,0 +1,136 @@
+@use '../../tools/responsive' as responsive;
+
+.contact {
+    display: grid;
+    grid-template-columns: var(--grid-container);
+    grid-column: full;
+    background-color: var(--color-complement);
+    scroll-margin-top: 99px;
+
+    &__inner {
+        grid-column: inner;
+        padding: var(--section-gap) 0;
+    }
+}
+
+.texts {
+    display: flex;
+    gap: 18rem;
+    margin-bottom: 2.3rem;
+}
+
+.text-1 {
+    :nth-child(2) {
+        margin-top: 2.3rem;
+    }
+    &__title {
+        font-weight: 400;
+        font-size: var(--font-size-7);
+        color: var(--color-secondary);
+        margin: 0;
+        padding: 0;
+        & ~ * {
+            color: var(--color-primary);
+            font-size: var(--font-size-2);
+            line-height: 1.5;
+        }
+    }
+}
+
+.text-2 {
+    &__title {
+        font-weight: 400;
+        font-size: var(--font-size-7);
+        color: var(--color-secondary);
+        margin: 0;
+        padding: 0;
+        & ~ * {
+            color: var(--color-primary);
+            font-size: var(--font-size-2);
+        }
+    }
+
+    &__list {
+        padding: 0;
+        margin: 0;
+        display: flex;
+
+        ul:first-child {
+            padding-left: 0;
+        }
+
+        ul {
+            margin-top: 2.3rem;
+        }
+
+        li {
+            line-height: 1.5;
+        }
+    }
+}
+
+#map {
+    height: 28.18rem;
+    width: 100%;
+}
+
+@include responsive.max(1142px) {
+    .texts {
+        flex-direction: column;
+        gap: 2.3rem;
+    }
+
+    .contact {
+        position: relative;
+
+        &::before {
+            content: "";
+            background-image: url(./src/scss/assets/char.svg);
+            background-size: 12.3rem 97.2rem;
+            background-repeat: no-repeat;
+            height: 97.3rem;
+            width: 12.3rem;
+            display: block;
+            position: absolute;
+            opacity: 0.8;
+            top: -15rem;
+            right: 9rem;
+        }
+    }
+}
+
+@include responsive.max(980px) {
+    .contact {
+        grid-template-columns: var(--grid-mobile);
+
+        &::before {
+            right: 3rem;
+        }
+    }
+}
+
+@include responsive.max(560px) {
+    .contact {
+        grid-template-columns: var(--grid-mobile-small);
+
+        &::before {
+            right: 1rem;
+        }
+    }
+}
+
+@include responsive.max(394px) {
+    .text-2 {
+        &__list {
+            flex-direction: column;
+
+            ul {
+                padding-left: 0;
+
+                &:last-child {
+                    margin-top: 0.5rem;
+                }
+            }
+        }
+    }
+}

@@ -1,22 +1,27 @@
 // Global variables
+
 :root {
     --section-gap: 8rem;
     --section-inner-gap: calc(var(--section-gap) * 0.75);
     --section-inner-gap-small: calc(var(--section-gap) * 0.5);
 
     --grid-gap: 3rem;
-    --grid-container: minmax(30px, 1fr) [inner-start] minmax(0, 78rem)
-        [inner-end] minmax(30px, 1fr);
-    --grid-inner: repeat(12, 1fr);
+    --grid-container: [full-start] minmax(9rem, 1fr) [inner-start]
+        minmax(0, 78rem) [inner-end] minmax(9rem, 1fr) [full-end];
+    --grid-mobile: [full-start] minmax(1rem, 3rem) [inner-start]
+        minmax(0, 78rem) [inner-end] minmax(1rem, 3rem) [full-end];
+    --grid-mobile-small: [full-start] minmax(1rem, 2rem) [inner-start]
+        minmax(0, 78rem) [inner-end] minmax(1rem, 2rem) [full-end];
+
     --content-width: 55rem;
 
     // Add fonts here
-    --font-primary: skolar-sans-latin, sans-serif;
+    --font-primary: "Source Serif Pro", serif;
     --font-secondary: cortado, sans-serif;
 
     //Change base-size and scale here
     --font-base: 1rem;
-    --font-scale: 1.33;
+    --font-scale: 1.25;
     --font-size-1: var(--font-base);
     --font-size-2: calc(var(--font-size-1) * var(--font-scale));
     --font-size-3: calc(var(--font-size-2) * var(--font-scale));
@@ -24,6 +29,8 @@
     --font-size-5: calc(var(--font-size-4) * var(--font-scale));
     --font-size-6: calc(var(--font-size-5) * var(--font-scale));
     --font-size-7: calc(var(--font-size-6) * var(--font-scale));
+    --font-size-8: calc(var(--font-size-7) * var(--font-scale));
+    --font-size-9: calc(var(--font-size-8) * var(--font-scale));
 
     // Change colors here
     --color-primary: #fff;

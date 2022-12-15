@@ -4,11 +4,25 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+#about {
+    // 1
+}
+
 body {
     margin: 0;
     padding: 0;
 }
 
+body.stop-transitions * {
+    transition: none !important;
+}
+
 img {
     max-width: 100%;
+    width: auto;
+    height: auto;
 }

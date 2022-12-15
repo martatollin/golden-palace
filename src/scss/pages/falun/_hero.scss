@@ -1,0 +1,66 @@
+@use '../../components/button' as button;
+@use '../../tools/responsive' as responsive;
+
+.hero2 {
+    display: grid;
+    grid-template-columns: var(--grid-container);
+    background-image: url(./src/scss/assets/background2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-column: full;
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.45);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 20;
+    }
+
+    &__inner {
+        grid-column: inner;
+        padding-top: 100px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__branding {
+        z-index: 98;
+
+        img {
+            min-width: 15rem;
+        }
+    }
+
+    a {
+        z-index: 98;
+    }
+
+    &__button {
+        z-index: 98;
+        @include button.standard();
+        margin-top: 2.5rem;
+    }
+}
+
+@include responsive.max(980px) {
+    .hero2 {
+        grid-template-columns: var(--grid-mobile);
+    }
+}
+
+@include responsive.max(560px) {
+    .hero2 {
+        grid-template-columns: var(--grid-mobile-small);
+    }
+}

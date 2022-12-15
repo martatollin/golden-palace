@@ -1,0 +1,83 @@
+@use '../tools/responsive' as responsive;
+
+.footer {
+    display: grid;
+    grid-template-columns: var(--grid-container);
+    background-color: var(--color-accent);
+    grid-column: full;
+    width: 100%;
+
+    &__inner {
+        grid-column: inner;
+    }
+
+    &__list {
+        padding: 0;
+        // padding: 0 8.75rem 0 8.75rem; //TEMP
+        display: flex;
+        justify-content: space-between;
+        color: var(--color-primary);
+    }
+
+    &__item {
+        display: flex;
+
+        img {
+            margin-right: 1rem;
+        }
+
+        a {
+            color: var(--color-primary);
+        }
+    }
+
+    &__img {
+        display: none;
+    }
+}
+
+@include responsive.max(980px) {
+    .footer {
+        grid-template-columns: var(--grid-mobile);
+    }
+}
+@include responsive.max(969px) {
+    .footer {
+        &__inner {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__list {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            // padding: 2.3rem 8.75rem; //TEMP
+        }
+
+        &__item {
+            img {
+                max-width: 1.7rem;
+            }
+        }
+
+        &__img {
+            display: flex;
+
+            min-width: 5rem;
+        }
+    }
+}
+
+@include responsive.max(560px) {
+    .footer {
+        grid-template-columns: var(--grid-mobile-small);
+    }
+}
+
+@include responsive.max(420px) {
+    .footer__img {
+        display: none;
+    }
+}

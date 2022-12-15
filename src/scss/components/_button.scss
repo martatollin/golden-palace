@@ -1,7 +1,7 @@
 @mixin standard(
     $background: var(--color-accent),
     $color: #fff,
-    $padding: 1rem 1.5rem
+    $padding: 1rem 2rem
 ) {
     background-color: $background;
     color: $color;
@@ -10,6 +10,8 @@
     border: none;
     display: inline-block;
     text-decoration: none;
+    font-family: var(--font-primary);
     font-size: var(--font-size-2);
+    font-weight: 300;
     cursor: pointer;
 }

@@ -1,0 +1,114 @@
+@use '../../components/button' as button;
+@use '../../tools/responsive' as responsive;
+
+.promotion {
+    display: grid;
+    grid-template-columns: var(--grid-container);
+    grid-column: full;
+    overflow: hidden;
+    position: relative;
+    &__inner {
+        grid-column: inner;
+        margin-top: var(--section-gap);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__titles {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: var(--font-size-7);
+        color: var(--color-secondary);
+        margin: 0;
+        padding: 0;
+    }
+
+    &__subtitle {
+        margin-top: 2.3rem;
+        font-size: var(--font-size-2);
+        font-weight: 200;
+    }
+
+    &__blocks {
+        margin: 3.8rem 0 3rem 0;
+        display: flex;
+        gap: 5.8rem;
+
+        .block-1 {
+            max-width: 20rem;
+            position: relative;
+            z-index: 98;
+
+            .text-1 {
+                margin-top: 1.4rem;
+                font-size: var(--font-base);
+                font-weight: 200;
+                color: var(--color-complement);
+            }
+
+            ::before {
+                content: "";
+                background-image: url(./src/scss/assets/char.svg);
+                background-repeat: no-repeat;
+                height: 100rem;
+                width: 100%;
+                display: block;
+                position: absolute;
+                top: -28rem;
+                left: -10rem;
+                z-index: -1;
+            }
+        }
+        .block-2 {
+            max-width: 20rem;
+            .text-2 {
+                margin-top: 1.4rem;
+                font-size: var(--font-base);
+                font-weight: 200;
+                color: var(--color-complement);
+            }
+        }
+    }
+
+    &__button {
+        @include button.standard();
+        margin-bottom: var(--section-gap);
+    }
+}
+
+@include responsive.max(1280px) {
+    .block-1 {
+        ::before {
+            display: none !important;
+        }
+    }
+}
+
+@include responsive.max(1023px) {
+    .promotion__blocks {
+        flex-direction: column;
+
+        .block-1,
+        .block-2 {
+            max-width: 23rem;
+        }
+    }
+}
+
+@include responsive.max(980px) {
+    .promotion {
+        grid-template-columns: var(--grid-mobile);
+    }
+}
+
+@include responsive.max(560px) {
+    .promotion {
+        grid-template-columns: var(--grid-mobile-small);
+    }
+}

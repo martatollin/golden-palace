@@ -1,0 +1,120 @@
+@use '../../tools/responsive' as responsive;
+
+.about {
+    display: grid;
+    grid-template-columns: var(--grid-container);
+    grid-column: full;
+    position: relative;
+    scroll-margin-top: 100px;
+
+    ::before {
+        content: "";
+        background-image: url(./src/scss/assets/char_2.svg);
+        background-size: 12.3rem 97.2rem;
+        background-repeat: no-repeat;
+        height: 97.3rem;
+        width: 12.3rem;
+        opacity: 0.24;
+        display: block;
+        position: absolute;
+        top: -17.2rem;
+        right: 1.5rem;
+        z-index: -1;
+    }
+
+    ::after {
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: var(--color-accent);
+        height: 58rem;
+        width: 30rem;
+        top: 0;
+        right: 0;
+        z-index: -2;
+    }
+    &__inner {
+        grid-column: inner;
+        margin-top: var(--section-gap);
+        display: flex;
+        gap: 5.563rem;
+    }
+
+    &__description {
+        max-width: 30rem;
+        display: flex;
+        flex-direction: column;
+        font-size: var(--font-size-2);
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: var(--font-size-7);
+        color: var(--color-secondary);
+        margin: 0;
+        padding: 0;
+    }
+
+    &__text {
+        line-height: 1.5;
+        margin-bottom: var(--section-gap);
+    }
+
+    &__img {
+        max-height: 42rem;
+        margin-bottom: var(--section-gap);
+    }
+}
+
+@include responsive.max(1250px) {
+    .about {
+        ::before,
+        ::after {
+            display: none;
+        }
+
+        &__inner {
+            flex-direction: column;
+            align-items: center;
+            gap: 2.3rem;
+        }
+
+        &__description {
+            align-items: center;
+            margin-bottom: 0;
+        }
+
+        &__text {
+            text-align: center;
+            margin-bottom: 0;
+        }
+    }
+}
+
+@include responsive.max(980px) {
+    .about {
+        grid-template-columns: var(--grid-mobile);
+    }
+}
+
+@include responsive.max(560px) {
+    .about {
+        grid-template-columns: var(--grid-mobile-small);
+    }
+}
+
+@include responsive.max(330px) {
+    .about {
+        &__inner {
+            gap: 1rem;
+        }
+
+        &__description {
+            font-size: var(--font-size-1);
+        }
+
+        &__text {
+            font-size: var(--font-size-1);
+        }
+    }
+}

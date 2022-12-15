@@ -6,35 +6,50 @@
     <title>Golden Palace</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.typekit.net/sqf6xsb.css">
+    <script src="js/activelink.js" defer></script>
+    <script src="js/map.js" defer></script>
+    <script src="js/menuresp.js" defer></script>
+    <script src="js/transition.js" defer></script>
 </head>
 <body>
 
     <div class="container-falun">
 
         <!-- Header -->
-        <header class="header">
+        <header class="header" >
             <div class="header__inner">
                 <!-- Branding -->
-                <a href="" class="header__logo">
-                    <img src="./src/scss/assets/logo12.svg" alt="">
+                <a href="index.html" class="header__branding">
+                    <img src="./src/scss/assets/logo11.svg" alt="">
+                    <!-- <img src="./src/scss/assets/logo9.svg" alt=""> -->
                 </a>
+
+                <!-- Menu -->
                 <nav class="menu">
                     <ul class="menu__list">
-                        <li class="menu__item"><a href="" class="menu__link">Hem</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Om oss</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Konakt</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Öppettider</a></li>
+                        <li class="menu__item menu__item--current"><a href="#home" class="menu__link">Hem</a></li>
+                        <li class="menu__item"><a href="#about" class="menu__link">Om oss</a></li>
+                        <li class="menu__item"><a href="#contact" class="menu__link">Kontakt</a></li>
+                        <li class="menu__item"><a href="#contact" class="menu__link">Öppettider</a></li>
                         
                     </ul>
                 </nav>
+
+                <!-- Responsive menu -->
+                <button class="menu-resp">
+                    <div class="menu-resp__hamburger"></div>
+                </button>
+
             </div>
         </header>
 
         <!-- Hero -->
-        <section class="hero2">
+        <section class="hero2" id="home">
             <div class="hero2__inner">
-               <div class="hero2__title">Restaurang Golden Palace</div>
-               <button class="hero2__button">Meny</button>
+                <a href="" class="hero2__branding">
+                    <img src="src/scss/assets/logo4.svg" alt="">
+                </a>
+               <a href="pdf.html"><button class="hero2__button">Meny</button></a>
             </div>
 
         </section>
@@ -42,90 +57,115 @@
         <!-- Promotion -->
         <section class="promotion">
             <div class="promotion__inner">
-                <img src="" alt="" class="promotion__char">
-               <h3 class="promotion__title">Erbjudanden</h3>
-               <div class="promotion__subtitle">Dagens Lunch & Lördags Buffé</div>
-               <div class="promotion__blocks">
+       
+                <div class="promotion__titles">
+                    <h3 class="promotion__title">Erbjudanden</h3>
+                    <div class="promotion__subtitle">Dagens Lunch & Lördags Buffé</div>
+                </div>
+                <div class="promotion__blocks">
                    <div class="block-1">
-                        <img src="" alt="" class="img-1">
+                        <img src="./src/scss/assets/dumpling.jpg" alt="" class="img-1">
                         <p class="text-1"><strong>Dagens Lunch</strong> måndag-fredag kl. 11-:00-15:00
                             100 kr/person, ingår salladsbuffé, kaffe och dryck. Lägg till efterrätt, Friterad banan med glass 25 kr/portion.</p>
                    </div>
                    <div class="block-2">
-                        <img src="" alt="" class="img-2">
+                        <img src="./src/scss/assets/kyckling.jpg" alt="" class="img-2">
                         <p class="text-2"> <strong>Lördags Buffé</strong>  lördagar kl. 12:00-16:00
                             150 kr/person inklusive dryck</p>
                    </div>
-                    <button class="promotion__button">Boka bord</button>
                    
                    
                 </div>
+                <a href="#contact"><button class="promotion__button">Boka bord</button></a>
             </div>
 
         </section>
 
         <section class="food-menu">
             <div class="food-menu__inner">
-                <h3 class="food-menu__title">Meny</h3>
+                
                 <div class="food-menu__box">
-                    <h4 class="food-menu__title">GOLDEN PALACE FALUN</h4>
-                    <p class="food-menu__text">Beställ för avhämtning eller boka bord på 023 268 68</p>
-                    <button class="food-menu__button">Meny</button>
+                    <h4 class="food-menu__title">Golden Palace Falun</h4>
+                    <p class="food-menu__subtitle">Beställ för avhämtning eller boka bord på 023 268 68</p>
+                    <a href="pdf.html"><button class="food-menu__button">Meny</button></a>
                 </div>
             </div>
         </section>
 
         <!-- About -->
-        <section class="about">
+        <section class="about" id="about">
             <div class="about__inner">
                 <div class="about__description">
                     <h3 class="about__title">Om oss</h3>
                     <div class="about__text">
-                       <p>Golden Palace är en familjekär kinarestaurang belägen i Falun och Borlänge stad. Vi erbjuder ett brett utbud av asiatiska rätter som får munnen att vattna.</p> 
-                        <p>Golden Palace är en familjekär kinarestaurang belägen i Falun och Borlänge stad. Vi erbjuder ett brett utbud av asiatiska rätter som får munnen att vattna. Golden Palace är en familjekär kinarestaurang belägen i Falun och Borlänge stad. Vi erbjuder ett brett utbud av asiatiska rätter.</p>
+                        
+                       <p>Golden Palace är en familjeägd kinarestaurang belägen i Falun och Borlänge stad med en varm och välkomnande atmosfär. Hos på Golden Palace står gästen i fokus och vi gör alltid vårt bästa för att ge våra besökare högklassig service och utsökt mat.</p>
+                        <p>Vi serverar lunchbuffe Måndag-Fredag 11.00-15.00.
+                            På buffén har vi ett stort urval av kinesiska och svenska rätter, soppa, salladsbord, färsk frukt samt kaffe och kaka.
+                            Ala cartemenyn är stor och det finns många klassiker men även autentisk kinamat. Alla rätter går även att beställa som takeaway.</p>
+                            
                     </div> 
                       
                 </div>
                 <div class="about__box">
                     <img src="" alt="" class="about__char">
                 </div>
-                <div class="about__picture">
-
+                <div class="about__img">
+                    <img src="./src/scss/assets/chef.jpg" alt="">
                 </div>
             </div>
         </section>
 
-        <section class="contact">
-            <div class="contact__texts">
+        <section class="contact" id="contact">
+            <div class="contact__inner">
+
+                <div class="texts">
                 <div class="text-1">
                     <h3 class="text-1__title">Kontakt</h3>
-                    <p>Beställ för avhämtning eller boka bord på 023 268 68</p>
-                    <p>Golden Palace
-                        Holmgatan 26, 791 71 Falun</p>
+                    <p>Beställ för avhämtning eller<br> boka bord på 023 268 68</p>
+                    <p>Golden Palace <br>Holmgatan 26, 791 71 Falun</p>
                 </div>
                 <div class="text-2">
                     <h3 class="text-2__title">Öppettider</h3>
-                    <p>Måndag　11 - 15
-                        Tisdag　   11 - 21
-                        Onsdag　 11 - 21
-                        Torsdag　 11 - 21
-                    </p>
-                    <p>Fredag　   11 - 22
-                        Lördag　   12 - 22
-                        Söndag　  13 - 20
-                    </p>
+                    <div class="text-2__list">
+                        <ul>
+                            <li>Måndag　11 - 15</li>
+                            <li>Tisdag　&nbsp;&nbsp;&nbsp;11 - 21</li>
+                            <li>Onsdag　 11 - 21</li>
+                            <li>Torsdag　11 - 21</li>
+                        </ul>
+                    
+                        <ul>
+                            <li>Fredag　   11 - 22</li>
+                            <li>Lördag　   12 - 22</li>
+                            <li>Söndag　 13 - 20</li>
+                        </ul>
+                        
+                    </div>
                 </div>
-                <a href=""><img src="" alt="" class="contact__map"></a>
+                </div>
+
+                <div id="map"></div>
+
+                <script async
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8YnBj29_X8o2YJVQnpr2GgXFxLddEcfA&map_ids=d8e7c4f0dd9a101b&callback=initMap">
+                </script>
+                
                 
             </div>
         </section>
 
         <footer class="footer">
-            <ul class="footer__list">
-                <li class="footer__item"><img src="" alt=""><p>+46 23 26 868</p></li>
-                <li class="footer__item"><img src="" alt=""><p>falun@golden-palace.se</p></li>
-                <li class="footer__item"><img src="" alt=""><p>Holmgatan 26, 791 71 Falun</p></li>
-            </ul>
+            <div class="footer__inner">
+                <ul class="footer__list">
+                <li class="footer__item"><img src="./src/scss/assets/phone_icon.svg" alt=""><p>+46 23 26 868</p></li>
+                <li class="footer__item"><img src="./src/scss/assets/mail_icon.svg" alt=""><p><a href="mailto:falun@golden-palace.se">falun@golden-palace.se</a></p></li>
+                <li class="footer__item"><img src="./src/scss/assets/pin_icon.svg" alt=""><p>Holmgatan 26, 791 71 Falun</p></li>
+                </ul>
+
+                <a href="" class="footer__img"><img src="./src/scss/assets/logo11.svg" alt=""></a>
+            </div>
+            
         </footer>
 
 

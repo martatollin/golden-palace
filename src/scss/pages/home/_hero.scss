@@ -1,8 +1,5 @@
 @use '../../components/button' as button;
-
-// .link {
-//
-// }
+@use '../../tools/responsive' as responsive;
 
 .hero {
     background-image: url(./src/scss/assets/background.jpg);
@@ -20,7 +17,7 @@
 
     &__title {
         font-family: var(--font-secondary);
-        font-size: var(--font-size-7);
+        font-size: var(--font-size-9);
         color: var(--color-secondary);
         font-weight: 400;
         font-style: normal;
@@ -38,6 +35,7 @@
 
     &__char {
         position: absolute;
+        height: 80%;
         top: 6rem;
         left: 3rem;
     }
@@ -46,9 +44,56 @@
 .button {
     &-falun {
         @include button.standard();
-        margin-right: 3rem;
+        margin-right: 1.5rem;
+        font-weight: 400;
     }
     &-borlange {
         @include button.standard();
+        font-weight: 400;
+    }
+}
+
+@include responsive.max(900px) {
+    .hero {
+        &__char {
+            display: none;
+        }
+    }
+}
+
+@include responsive.max(500px) {
+    .hero {
+        &__title {
+            font-size: var(--font-size-8);
+        }
+
+        &__text {
+            text-align: center;
+            padding: 0 2rem;
+        }
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button {
+        &-falun {
+            margin: 0 0 2.3rem 0;
+        }
+    }
+}
+
+@include responsive.max(300px) {
+    .hero {
+        &__title {
+            font-size: var(--font-size-7);
+        }
+
+        &__text {
+            font-size: var(--font-size-1);
+        }
     }
 }
