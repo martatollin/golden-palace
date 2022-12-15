@@ -16,7 +16,7 @@ function initMap() {
       zoom: 18,
       mapId: 'd8e7c4f0dd9a101b',
       center: myLatLng,
-      
+      disableDefaultUI:!0
     });
   
     new google.maps.Marker({
